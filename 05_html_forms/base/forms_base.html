@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Forms</title>
+    <style>
+        td {
+            vertical-align: top;
+        }
+
+        table {
+            width: 700px;
+            align-items: center;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+</head>
+<body>
+<form action="http://fe.it-academy.by/TestForm.php" method="post" target="-blank" enctype="multipart/form-data">
+    <table>
+
+        <tr>
+            <td>
+                <label><b>Простая форма поиска с вариантами:</b></label>
+                <fieldset>
+                    <legend>Строка поиска</legend>
+                    <label for="inp"></label>
+                    <input type="text" name="123" maxlength="10" id="inp">
+                    <input type="submit" value="искать">
+                    <legend></legend>
+                    <label><input type="radio" name="radio1"> на сайте</label>
+                    <label><input type="radio" name="radio2"> в google</label>
+                </fieldset>
+            </td>
+            <td>
+                <label><b>Простая форма поиска с вариантами:</b></label>
+                <fieldset>
+                    <legend>Строка поиска</legend>
+
+                    <label><input type="text" name="321" autofocus></label>
+                    <label for="1112"></label>
+                    <input type="submit" value="искать" id="1112">
+                    <legend></legend>
+                    <label><input type="radio" name="radio3"> сайте</label>
+                    <label><input type="radio" name="radio4"> в google</label>
+                </fieldset>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <label><b>Простая форма авторизации:</b></label>
+                <fieldset>
+                    <legend>Строка поиска</legend>
+                    <label><input type="text" name="456" placeholder=""> *логин</label> <br>
+                    <label><input type="text" name="654" placeholder=""> *пароль</label><br>
+                    <label><input type="checkbox" name="check1"> оставаться в системе</label>
+                    <div><input type="submit" value="Войти"></div>
+                </fieldset>
+
+            </td>
+            <td>
+                <label><b>Опрос(голосование):</b></label>
+                <fieldset>
+                    <legend>как вам?</legend>
+                    <label><input type="radio" name="radio11"> ничего</label><br>
+                    <label><input type="radio" name="radio11"> неплохо</label><br>
+                    <label><input type="radio" name="radio11"> хорошо</label><br>
+                    <label><input type="radio" name="radio11"> супер</label><br>
+                    <input type="submit" value="Отправить">
+                </fieldset>
+
+            </td>
+        </tr>
+
+
+        <tr>
+            <td>
+                <label><b>Отзыв:</b></label>
+                <fieldset>
+                    <legend>Оставьте свой отзыв</legend>
+                    <label><input type="text" name="name" placeholder="">Имя</label><br>
+                    <label><input type="email" name="email" placeholder="">E-mail</label><br>
+                    <label for="area"></label>
+                    <textarea name="text area" lang="ru" id="area">Форма отправки</textarea><br>
+                    <label for="sent"></label>
+                    <input type="submit" value="Отправить" id="sent">
+                </fieldset>
+
+            </td>
+            <td>
+                <label><b>Выпадающий и мульти списки:</b></label>
+                <fieldset>
+                    <legend>Города РБ</legend>
+                    <label for="list"></label>
+                    <select name="list" id="list">
+                        <optgroup label="Города РБ">
+                            <option value="1">Брест</option>
+                            <option value="2">Минск</option>
+                            <option value="3">Витебск</option>
+                        </optgroup>
+                        <optgroup label="Города России">
+                            <option value="4">Москва</option>
+                            <option value="5">Рязань</option>
+                            <option value="6">Магадан</option>
+                        </optgroup>
+                    </select>
+                    <input type="submit" value="Ok">
+                </fieldset>
+
+            </td>
+        </tr>
+
+        <tr>
+            <td><label><b>Загрузка файла на сервер:</b></label>
+                <fieldset>
+                    <legend>Upload</legend>
+                    Файл:
+                    <input type="file" name="file_Field"><br>
+                    <label for="year">Сроки хранения(года):</label> <br>
+                    <input type="text" name="999" id="year"><br>
+                    <input type="submit" value="Загрузить">
+                </fieldset>
+
+            </td>
+            <td>
+                <label><b>Валидация файлов HTML5</b></label>
+                <fieldset>
+                    <legend>Строка поиска</legend>
+                    <label><input type="text" name="name" lang="ru"></label><br>
+                    <label><input type="tel" name="tel" pattern="+375 "></label><br>
+                    <input type="submit" value="Проверить">
+                </fieldset>
+            </td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>
