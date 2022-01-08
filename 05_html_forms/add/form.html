@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>form</title>
+</head>
+<body>
+<h1>Заполните анкету</h1>
+<form>
+  <fieldset>
+    <legend> Личные данные</legend>
+    <label><input type="text" name="surname" pattern="[А-ЯË]{1}[а-яё]*$" maxlength="25" placeholder="Фамилия" autofocus></label> <br>
+    <label><input type="text" name="name" pattern="[А-ЯË]{1}[а-яё]*$" maxlength="20" placeholder="Имя"></label> <br>
+    <label><input type="text" name="patronymic " pattern="[А-ЯË]{1}[а-яё]*$" maxlength="24" placeholder="Отчество"></label>
+
+  <fieldset>
+    <legend>Паспортные данные</legend>
+    <label><input type="text" name="pass_series" size="3" pattern="[A-Z]{2}$" maxlength="2" placeholder="MP"></label>
+    <label><input type="text" name="pass_number" size="8" pattern="[0-9]{7}$" maxlength="7" placeholder="0123456"></label>
+  </fieldset>
+  <fieldset>
+    <legend>Дата рождения</legend>
+    <label><input type="text" name="year" size="6" maxlength="4" placeholder="ГГГГ"></label><br>
+    <label for="123"></label>
+    <select  name="month" id="123">
+      <optgroup label="месяц">
+        <option value="1">январь</option>
+        <option value="2">февраль</option>
+        <option value="3">март</option>
+        <option value="4">апрель</option>
+        <option value="5">май</option>
+        <option value="6">июнь</option>
+        <option value="7">июль</option>
+        <option value="8">август</option>
+        <option value="9">сентябрь</option>
+        <option value="10">октябрь</option>
+        <option value="11">ноябрь</option>
+        <option value="12">декабрь</option>
+      </optgroup>
+    </select><br>
+    <label><input type="text" name="date" size="3" pattern="[0-31]{2}$" maxlength="2" placeholder="ДД"></label>
+  </fieldset>
+    <label for="456"></label>
+  <select name="national" id="456">
+    <optgroup label="">
+      <option>LT</option>
+      <option>RU</option>
+      <option>BY</option>
+      <option>KR</option>
+      <option>UK</option>
+      <option>USA</option>
+    </optgroup>
+  </select>
+    <legend>Адрес:</legend>
+    <label><textarea></textarea></label>
+  </fieldset>
+  <fieldset>
+    <legend>Интересы</legend>
+    <fieldset>
+      <legend>Хобби</legend>
+      <label><input type="checkbox" name="check1">Рыбалка</label><br>
+      <label><input type="checkbox" name="check1">Астрономия</label><br>
+      <label><input type="checkbox" name="check1">Дайвтинг</label><br>
+      <label><input type="checkbox" name="check1">Марки</label><br>
+    </fieldset>
+    <fieldset>
+      <legend>Домашние животные</legend>
+      <label for="list"></label>
+      <select name="list_pets[]" size="12" multiple id="list">
+        <option value="00">Попугаи</option>
+        <option value="01">Волнистый</option>
+        <option value="02">Ара</option>
+        <option value="03">Неразлучник</option>
+        <option value="000">Рыба</option>
+        <option value="001">Караси</option>
+        <option value="002">Окуни</option>
+        <option value="003">Осётр</option>
+        <option value="0">Птицы</option>
+        <option value="1">Стая ворон</option>
+        <option value="2">Аист</option>
+        <option value="3">Археоптерикс</option>
+      </select>
+    </fieldset>
+  </fieldset>
+  <fieldset>
+    <legend>Данные для входа и восстановления пароля</legend>
+    <label for="login"></label>
+      <input type="text" id="login" name="login_login" size="22" pattern="[A-Z]{5.}" maxlength="20" placeholder="Логин"><br>
+    <label><input type="password" name="password" size="22" pattern="[A-Z]{10.}" maxlength="20" placeholder="Пароль" autocomplete="off" ></label>
+  </fieldset>
+  <fieldset>
+    <legend>Координаты:</legend>
+    <label><input type="email" name="e-mail" placeholder="введите адрес почты"></label><br>
+    <label><input type="url" name="site" placeholder="введите адрес сайта"></label>
+  </fieldset>
+  <fieldset>
+    <legend>Цифры</legend>
+    <label><input type="number" min="-2.5" max="2.5" step="0.1"></label><br>
+    <label><input type="range" min="1" max="10"></label>
+  </fieldset>
+  <fieldset>
+    <legend>Кнопки управления</legend>
+    <label><input type="submit" value="Отправить"></label>
+    <label><input type="submit" value="Сбросить"></label><br>
+    <label><input type="image" src="icons8-post-96.png" alt="111"></label>
+  </fieldset>
+</form>
+</body>
+</html>
+

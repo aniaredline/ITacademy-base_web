@@ -8,26 +8,26 @@
 </head>
 <style>
     .buttons {
-  text-align: center;
-}
+        text-align: center;
+    }
 </style>
 <body>
-    
-<h1>HOW-TO: Программа на Python, Часть 3</h1>  <img src="Icon-Python.7bb116a5.png" align="right"  alt="img"> 
+
+<h1>HOW-TO: Программа на Python, Часть 3</h1>  <img src="Icon-Python.7bb116a5.png" align="right" alt="img">
 <ul>
-    <li><em><a href= "index.html"> Программа на Python — часть 1 </a> </em></li>
-    <li><em><a href= "index2.html"> Программа на Python — часть 2 </a> </em></li>
-    <li><em><a href= "index3.html"> Программа на Python — часть 3 </a> </em></li>
-</ul> 
+    <li><em><a href="index.html"> Программа на Python — часть 1 </a> </em></li>
+    <li><em><a href="index2.html"> Программа на Python — часть 2 </a> </em></li>
+    <li><em><a href="index3.html"> Программа на Python — часть 3 </a> </em></li>
+</ul>
 <h2 id="soder">Содержание</h2>
 <h3>HOW-TO: Программа на Python, Часть 3</h3>
 <ul>
-    
+
     <li><a href="#mod">Модули</a></li>
     <li><a href="#func">Функции</a></li>
-    
+
 </ul>
-<hr>    
+<hr>
 <p>В прошлый раз мы изучали списки, подстановку переменных, комментарии, сравнение и
     присвоение, операторы <b>if</b> и <b>while</b>. Я обещал, что в этой части мы изучим модули и
     функции. Давайте начнём.
@@ -38,13 +38,16 @@
     свои модули, использовать те, которые поставляются с Python или которые написали
     другие. В самом Python есть сотни модулей, которые облегчают написание программ.
     Список модулей, поставляемых с Python, находится по адресу:
-    <a href="http://docs.python.org/modindex.html">http://docs.python.org/modindex.html</a>. Некоторые модули предназначены для определённых
+    <a href="http://docs.python.org/modindex.html">http://docs.python.org/modindex.html</a>. Некоторые модули
+    предназначены для определённых
     операционных систем, но большинство из них кроссплатформенные и работают
-    одинаково на <a href="https://ubuntu.com/" target="_blank">Linux</a>, <a href="https://www.apple.com/" target="_blank">Mac</a> и <a href="https://www.microsoft.com/" target="_blank">Microsoft Windows</a>. Для использования внешнего модуля
+    одинаково на <a href="https://ubuntu.com/" target="_blank">Linux</a>, <a href="https://www.apple.com/"
+                                                                             target="_blank">Mac</a> и <a
+            href="https://www.microsoft.com/" target="_blank">Microsoft Windows</a>. Для использования внешнего модуля
     необходимо импортировать его в программу. Один из модулей, поставляемых с Python,
     называется «random». Он даёт возможность генерировать псевдослучайные числа. Мы
     используем этот модуль в нашем первом примере.
-    </p>
+</p>
 <pre><code>
 #=======================================
 # random_example.py
@@ -57,7 +60,7 @@ for cntr in range(1,15):
 </code></pre>
 <p>Давайте разберём код по строкам. Первые четыре строки — это комментарии, о которых
     мы говорили в прошлый раз. Пятая строка говорит Python, что нужно использовать
-    модуль «random». Мы должны явно указать Python на это.    
+    модуль «random». Мы должны явно указать Python на это.
 </p>
 <hr>
 
@@ -72,7 +75,7 @@ for cntr in range(1,15):
     сложить их, перемножить, вычесть одно из другого, затем вывести на экран эти числа и
     результаты одновременно. Допустим, нам нужно сделать это три раза для трёх наборов
     чисел. Тогда наш пример будет выглядеть как код ниже.
-    </p>
+</p>
 <pre><code>
 #silly example
 print '%d + %d = %d ' % (1,2,1+2)
@@ -96,7 +99,7 @@ print '\n'
     функции и список параметров, если таковые имеются, в круглых скобках. Эту строку
     необходимо завершить двоеточием. Код функции набирается с отступом. Наш
     улучшенный простой пример (<u>№2</u>) показан ниже.
-    </p>
+</p>
 <pre><code>
     #silly example 2...still silly, but better
     def DoTwo(num1,num2):
@@ -109,13 +112,15 @@ print '\n'
     DoTwo(10,5)
 </code></pre>
 
-<p>Как видите, здесь написано меньше кода — 8 строк вместо 12. Если нам нужно будет чтолибо поменять в функции, мы сможем сделать это, не создавая проблем для нашей
+<p>Как видите, здесь написано меньше кода — 8 строк вместо 12. Если нам нужно будет чтолибо поменять в функции, мы
+    сможем сделать это, не создавая проблем для нашей
     программы. Чтобы вызвать функцию, нужно написать её имя и параметры.
 </p>
-<a href="index2.html"><img src="back.png" align="left"  alt="img"></a>
+<a href="index2.html"><img src="back.png" align="left" alt="img"></a>
+<a href="#"><img src="next.png" align="right" alt="img"></a>
 <div class="buttons">
-  <a href="index.html"><img src="home.png" align="center"  alt="img"></a>
+    <a href="index.html"><img src="home.png" align="center" alt="img"></a>
 </div>
-<a href="#"><img src="next.png" align="right"  alt="img"></a> 
+
 </body>
 </html>

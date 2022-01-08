@@ -1,0 +1,201 @@
+!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<table>
+    <tr>
+        <td>
+            <h1>HOW-TO: Программа на Python, Часть 3</h1>
+            <ul>
+                <li><em><a href="index.html"> Программа на Python — часть 1 </a> </em></li>
+                <li><em><a href="index2.html"> Программа на Python — часть 2 </a> </em></li>
+                <li><em><a href="index3.html"> Программа на Python — часть 3 </a> </em></li>
+            </ul>
+            <h2 id="soder">Содержание</h2>
+            <h3>HOW-TO: Программа на Python, Часть 3</h3>
+            <ul>
+
+                <li><a href="#mod">Модули</a></li>
+                <li><a href="#func">Функции</a></li>
+
+            </ul>
+            <hr>
+        </td>
+        <td align="right">
+            <svg width="256px" height="255px" viewBox="0 0 256 255" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                 xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid">
+                <defs>
+                    <linearGradient x1="12.9593594%" y1="12.0393928%" x2="79.6388325%" y2="78.2008538%"
+                                    id="linearGradient-1">
+                        <stop stop-color="#387EB8" offset="0%"></stop>
+                        <stop stop-color="#366994" offset="100%"></stop>
+                    </linearGradient>
+                    <linearGradient x1="19.127525%" y1="20.5791813%" x2="90.7415328%" y2="88.4290372%"
+                                    id="linearGradient-2">
+                        <stop stop-color="#FFE052" offset="0%"></stop>
+                        <stop stop-color="#FFC331" offset="100%"></stop>
+                    </linearGradient>
+                </defs>
+                <g>
+                    <path d="M126.915866,0.0722755491 C62.0835831,0.0722801733 66.1321288,28.1874648 66.1321288,28.1874648 L66.2044043,57.3145115 L128.072276,57.3145115 L128.072276,66.0598532 L41.6307171,66.0598532 C41.6307171,66.0598532 0.144551098,61.3549438 0.144551098,126.771315 C0.144546474,192.187673 36.3546019,189.867871 36.3546019,189.867871 L57.9649915,189.867871 L57.9649915,159.51214 C57.9649915,159.51214 56.8001363,123.302089 93.5968379,123.302089 L154.95878,123.302089 C154.95878,123.302089 189.434218,123.859386 189.434218,89.9830604 L189.434218,33.9695088 C189.434218,33.9695041 194.668541,0.0722755491 126.915866,0.0722755491 L126.915866,0.0722755491 L126.915866,0.0722755491 Z M92.8018069,19.6589497 C98.9572068,19.6589452 103.932242,24.6339846 103.932242,30.7893845 C103.932246,36.9447844 98.9572068,41.9198193 92.8018069,41.9198193 C86.646407,41.9198239 81.6713721,36.9447844 81.6713721,30.7893845 C81.6713674,24.6339846 86.646407,19.6589497 92.8018069,19.6589497 L92.8018069,19.6589497 L92.8018069,19.6589497 Z"
+                          fill="url(#linearGradient-1)"></path>
+                    <path d="M128.757101,254.126271 C193.589403,254.126271 189.540839,226.011081 189.540839,226.011081 L189.468564,196.884035 L127.600692,196.884035 L127.600692,188.138693 L214.042251,188.138693 C214.042251,188.138693 255.528417,192.843589 255.528417,127.427208 C255.52844,62.0108566 219.318366,64.3306589 219.318366,64.3306589 L197.707976,64.3306589 L197.707976,94.6863832 C197.707976,94.6863832 198.87285,130.896434 162.07613,130.896434 L100.714182,130.896434 C100.714182,130.896434 66.238745,130.339138 66.238745,164.215486 L66.238745,220.229038 C66.238745,220.229038 61.0044225,254.126271 128.757101,254.126271 L128.757101,254.126271 L128.757101,254.126271 Z M162.87116,234.539597 C156.715759,234.539597 151.740726,229.564564 151.740726,223.409162 C151.740726,217.253759 156.715759,212.278727 162.87116,212.278727 C169.026563,212.278727 174.001595,217.253759 174.001595,223.409162 C174.001618,229.564564 169.026563,234.539597 162.87116,234.539597 L162.87116,234.539597 L162.87116,234.539597 Z"
+                          fill="url(#linearGradient-2)"></path>
+                </g>
+            </svg>
+        </td>
+    </tr>
+</table>
+<p>В прошлый раз мы изучали списки, подстановку переменных, комментарии, сравнение и
+    присвоение, операторы <b>if</b> и <b>while</b>. Я обещал, что в этой части мы изучим модули и
+    функции. Давайте начнём.
+</p>
+<h2 id="mod">Модули</h2>
+<a href="#soder">К содержанию</a>
+<p>Модули предлагают способ расширить программирование на Python. Вы можете создать
+    свои модули, использовать те, которые поставляются с Python или которые написали
+    другие. В самом Python есть сотни модулей, которые облегчают написание программ.
+    Список модулей, поставляемых с Python, находится по адресу:
+    <a href="http://docs.python.org/modindex.html">http://docs.python.org/modindex.html</a>. Некоторые модули
+    предназначены для определённых
+    операционных систем, но большинство из них кроссплатформенные и работают
+    одинаково на <a href="https://ubuntu.com/" target="_blank">Linux</a>, <a href="https://www.apple.com/"
+                                                                             target="_blank">Mac</a> и <a
+            href="https://www.microsoft.com/" target="_blank">Microsoft Windows</a>. Для использования внешнего модуля
+    необходимо импортировать его в программу. Один из модулей, поставляемых с Python,
+    называется «random». Он даёт возможность генерировать псевдослучайные числа. Мы
+    используем этот модуль в нашем первом примере.
+</p>
+<pre><code>
+#=======================================
+# random_example.py
+# Module example using the random module
+#=======================================
+import random
+# print 14 random integers
+for cntr in range(1,15):
+    print random.randint(1,10)   
+</code></pre>
+<p>Давайте разберём код по строкам. Первые четыре строки — это комментарии, о которых
+    мы говорили в прошлый раз. Пятая строка говорит Python, что нужно использовать
+    модуль «random». Мы должны явно указать Python на это.
+</p>
+<hr>
+
+<h2 id="func">Функции</h2>
+<a href="#soder">К содержанию</a>
+<p>Когда мы импортировали модуль random, мы использовали функцию <b>randint()</b>. Функция
+    — это блок кода, который создан для того, чтобы вызывать его в программе, обычно,
+    более одного раза. Это упрощает работу над программой и предотвращает набор одного и
+    того же кода снова и снова. Грубо говоря, если вам нужно написать некоторый код
+    больше, чем 1-2 раза, стоит сделать его функцией. Хотя следующие два примера очень
+    простые, это хорошие примеры функций. Теперь мы хотим, скажем, взять два числа,
+    сложить их, перемножить, вычесть одно из другого, затем вывести на экран эти числа и
+    результаты одновременно. Допустим, нам нужно сделать это три раза для трёх наборов
+    чисел. Тогда наш пример будет выглядеть как код ниже.
+</p>
+<pre><code>
+#silly example
+print '%d + %d = %d ' % (1,2,1+2)
+print '%d * %d = %d ' % (1,2,1*2)
+print '%d - %d = %d ' % (1,2,1-2)
+print '\n'
+print '%d + %d = %d ' % (1,4,1+4)
+print '%d * %d = %d ' % (1,4,1*4)
+print '%d - %d = %d ' % (1,4,1-4)
+print '\n'
+print '%d + %d = %d ' % (10,5,10+5)
+print '%d * %d = %d ' % (10,5,10*5)
+print '%d - %d = %d ' % (10,5,10-5)
+print '\n'
+</code></pre>
+<p>Здесь нужно не только набрать много текста, но и непременно возникнут ошибки как при
+    написании, так и при внесении изменений. Вместо этого мы создадим функцию, которую
+    назовём «<b><i>DoTwo</i></b>». Она будет каждый раз брать два числа, проводить математические
+    операции и выводить результат. Начнём с ключевого слова «<b><i>def</i></b>», которое сигнализирует
+    о том, что мы собираемся определить функцию. После слова «<b><i>def</i></b>» добавим название
+    функции и список параметров, если таковые имеются, в круглых скобках. Эту строку
+    необходимо завершить двоеточием. Код функции набирается с отступом. Наш
+    улучшенный простой пример (<u>№2</u>) показан ниже.
+</p>
+<pre><code>
+    #silly example 2...still silly, but better
+    def DoTwo(num1,num2):
+        print '%d + %d = %d ' % (num1,num2,num1+num2)
+        print '%d * %d = %d ' % (num1,num2,num1*num2)
+        print '%d - %d = %d ' % (num1,num2,num1-num2)
+        print '\n'
+    DoTwo(1,2)
+    DoTwo(1,4)
+    DoTwo(10,5)
+</code></pre>
+
+<p>Как видите, здесь написано меньше кода — 8 строк вместо 12. Если нам нужно будет чтолибо поменять в функции, мы
+    сможем сделать это, не создавая проблем для нашей
+    программы. Чтобы вызвать функцию, нужно написать её имя и параметры.
+</p>
+<table width="100%">
+    <tr>
+        <td align="left" title="back"><a href="index2.html">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="50"
+                 height="50" viewBox="0 0 256 256" xml:space="preserve">
+<desc>Created with Fabric.js 1.7.22</desc>
+                <defs>
+</defs>
+                <g transform="translate(128 128) scale(0.72 0.72)" style="">
+	<g style="stroke: none; stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: none; fill-rule: nonzero; opacity: 1;"
+       transform="translate(-175.05 -175.05000000000004) scale(3.89 3.89)">
+	<path d="M 45 90 c 24.853 0 45 -20.147 45 -45 C 90 20.147 69.853 0 45 0 S 0 20.147 0 45 C 0 69.853 20.147 90 45 90 z M 21.459 43.791 l 18.366 -18.366 c 0.668 -0.668 1.75 -0.668 2.418 0 l 6.055 6.055 c 0.668 0.668 0.668 1.751 0 2.418 l -5.111 5.11 l 24.144 0 c 0.944 0 1.71 0.766 1.71 1.71 v 8.563 c 0 0.944 -0.766 1.71 -1.71 1.71 l -24.145 0 l 5.111 5.111 c 0.668 0.668 0.668 1.751 0 2.418 l -6.055 6.055 c -0.668 0.668 -1.751 0.668 -2.418 0 L 21.459 46.209 C 20.791 45.541 20.791 44.458 21.459 43.791 z"
+          style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(91,160,208); fill-rule: nonzero; opacity: 1;"
+          transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round"/>
+</g>
+</g>
+</svg>
+        </a>
+        </td>
+        <td align="center" title="home"><a href="index.html">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="50"
+                 height="50" viewBox="0 0 256 256" xml:space="preserve">
+<desc>Created with Fabric.js 1.7.22</desc>
+                <defs>
+</defs>
+                <g transform="translate(128 128) scale(0.72 0.72)" style="">
+	<g style="stroke: none; stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: none; fill-rule: nonzero; opacity: 1;"
+       transform="translate(-175.05 -175.05000000000004) scale(3.89 3.89)">
+	<circle cx="45" cy="45" r="45"
+            style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(0,117,168); fill-rule: nonzero; opacity: 1;"
+            transform="  matrix(1 0 0 1 0 0) "/>
+        <path d="M 69.518 45.034 L 46.157 21.673 c -0.639 -0.639 -1.674 -0.639 -2.313 0 L 20.482 45.034 c -1.03 1.03 -0.301 2.792 1.157 2.792 h 3.519 c 0.903 0 1.636 0.732 1.636 1.636 V 67.17 c 0 0.903 0.732 1.636 1.636 1.636 h 33.141 c 0.903 0 1.636 -0.732 1.636 -1.636 V 49.462 c 0 -0.903 0.732 -1.636 1.636 -1.636 h 3.519 C 69.818 47.827 70.548 46.065 69.518 45.034 z"
+              style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(255,255,255); fill-rule: nonzero; opacity: 1;"
+              transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round"/>
+</g>
+</g>
+</svg>
+        </a>
+        </td>
+        <td align="right" title="next"><a href="#">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="50"
+                 height="50" viewBox="0 0 256 256" xml:space="preserve">
+<desc>Created with Fabric.js 1.7.22</desc>
+                <defs>
+</defs>
+                <g transform="translate(128 128) scale(0.72 0.72)" style="">
+	<g style="stroke: none; stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: none; fill-rule: nonzero; opacity: 1;"
+       transform="translate(-175.05 -175.05000000000004) scale(3.89 3.89)">
+	<path d="M 45 0 C 20.147 0 0 20.147 0 45 c 0 24.853 20.147 45 45 45 s 45 -20.147 45 -45 C 90 20.147 69.853 0 45 0 z M 68.541 46.209 L 50.175 64.575 c -0.668 0.668 -1.75 0.668 -2.418 0 l -6.055 -6.055 c -0.668 -0.668 -0.668 -1.751 0 -2.418 l 5.111 -5.11 H 22.668 c -0.944 0 -1.71 -0.766 -1.71 -1.71 v -8.563 c 0 -0.944 0.766 -1.71 1.71 -1.71 h 24.145 l -5.111 -5.111 c -0.668 -0.668 -0.668 -1.751 0 -2.418 l 6.055 -6.055 c 0.668 -0.668 1.751 -0.668 2.418 0 l 18.366 18.366 C 69.209 44.459 69.209 45.542 68.541 46.209 z"
+          style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(91,160,208); fill-rule: nonzero; opacity: 1;"
+          transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round"/>
+</g>
+</g>
+</svg>
+        </a>
+        </td>
+    </tr>
+</table>
+</body>
+</html>
