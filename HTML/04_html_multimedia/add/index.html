@@ -4,31 +4,23 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Python_1</title>
 </head>
 <body>
-
 <table width="100%">
     <tr>
-        <td><h1>HOW-TO: Программа на Python, Часть 2</h1>
+        <td><h1>HOW-TO: Программа на Python, Часть 1</h1>
             <ul>
                 <li><em><a href="index.html"> Программа на Python — часть 1 </a> </em></li>
                 <li><em><a href="index2.html"> Программа на Python — часть 2 </a> </em></li>
                 <li><em><a href="index3.html"> Программа на Python — часть 3 </a> </em></li>
             </ul>
             <h2 id="soder">Содержание</h2>
-            <h3>HOW-TO: Программа на Python, Часть 2</h3>
+            <h3>HOW-TO: Программа на Python, Часть 1</h3>
             <ul>
-                <li><a href="#spiski">Списки</a></li>
-                <li><a href="#comm">Комментарии</a></li>
-
+                <li><a href="#prog">Наша первая программа</a></li>
+                <li><a href="#for">Пример цикла For</a></li>
             </ul>
-            <hr>
-            <p>Впрошлом уроке мы рассмотрели простую программу, которая использовала raw_input
-                для получения ответа пользователя, простые типы переменных и простой цикл «<b>for</b>». В
-                этом уроке мы рассмотрим ещё больше типов переменных и напишем ещё больше
-                программ.
-            </p>
         </td>
         <td align="right">
             <svg width="256px" height="255px" viewBox="0 0 256 255" version="1.1" xmlns="http://www.w3.org/2000/svg"
@@ -56,59 +48,61 @@
     </tr>
 </table>
 
-<p>Давайте рассмотрим другой тип переменных, который называется списки. В других
-    языках программирования они называются <i>массивами</i>. Если мы обратимся к аналогии с
-    коробками для обуви, то массив (список) представляет собой несколько склеенных друг с
-    другом коробок с одинаковыми вещами. Например, в одной коробке лежат вилки, в
-    другой — ножи, в третьей — ложки. Посмотрим на простой список— список месяцев. Мы
-    запрограммируем его так:
+<p>Из множества существующих языков программирования Python — один из самых лёгких
+    в изучении. Он создан в конце 80-х годов XX века, но с тех пор он сильно изменился.
+    Хотя Python входит в состав большинства дистрибутивов Linux, на него часто не
+    обращают внимания при выборе языка для изучения. В этой статье мы рассмотрим
+    создание консольных приложений, а в следующей — программирование графических
+    интерфейсов (<u>GUI</u>). Давайте создадим простую программу прямо сейчас.
 </p>
-<pre>
-months =
-['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec']  
-</pre>
-<p>Чтобы создать список, мы заключили все значения в квадратные скобки ( <b>'['</b> и <b>']'</b> ). Мы
-    назвали наш список 'months'. Чтобы использовать список, мы дадим команду print
-    <b>months[0]</b> или <b>months[1]</b> (которые выведут на экран '<i>Jan</i>' или '<i>Feb</i>'). Помните: счет
-    начинается с нуля. Чтобы найти длину списка, можно использовать такую функцию:
-</p>
-<pre>
-print len(months)
-</pre>
-<p>которая вернёт 12.</p>
-<p>Ещё один пример списков — категории в поваренной книге. Например…</p>
-<pre>
-categories = ['Main dish','Meat','Fish','Soup','Cookies']
-</pre>
-<p>Таким образом, в <b>categories[0]</b> хранится '<i>Main dish</i>', а в <b>categories[4]</b> — '<i>Cookies</i>'. Всё
-    очень просто. Я уверен, вы сможете придумать много других примеров использования
-    списков.</p>
-<hr>
-<h2 id="comm">Комментарии</h2>
+
+<h2>Наша первая программа</h2>
 <a href="#soder">К содержанию</a>
-<p>Далее, мы должны обсудить комментарии. Комментарии важны по нескольким причинам.
-    Они не только говорят вам или другим людям, что вы пытаетесь делать, но и напомнят
-    вам через полгода, что же вы хотели сделать. Когда вы будете писать много программ,
-    комментарии станут важными. Также при их помощи вы заставите Python игнорировать
-    какие-либо части кода. Чтобы закомментировать строку, поставьте перед ней знак '#'.
-    Например:
+<p>Наберём код в текстовом редакторе (например, в <b>gedit</b>). Потом мы разберёмся, что делает каждая строка и пойдём
+    дальше.</p>
+<p>Введите эти 4 строки:</p>
+<pre><code>
+#!/usr/bin/env python
+print 'Hello. I am a python program.'
+name = raw_input("What is your name?")
+print "Hello there, " + name + "!"
+</code></pre>
+<p>Это всё. Сохраните файл как <b>hello.py</b> в любом месте. Я предлагаю сохранить его в папке
+    <b>python_examples</b> в домашнем каталоге. Этот пример показывает, как просто написать
+    программу на Python. Для запуска программы нужно сделать её файл исполняемым. Для
+    этого введите в терминале
 </p>
-<pre>
-#
+<p><b><u>chmod +x hello.py</u></b></p>
+<p>в папке, в которой вы сохранили программу. Теперь запустите её.</p>
+<pre>greg@earth:~/python_examples$ ./hello.py
+Hello. I am a python program.
+What is your name? Ferd Burphel
+Hello there, Ferd Burphel!
+greg@earth:~/python_examples$
 </pre>
-<p>Это комментарий</p>
-<p>Комментарии можно вставлять в любое место в строке, но помните, что Python
-    проигнорирует всё, что идёт после '#'</p>
-
-
+<h4>Вот и всё.</h4>
+<h2 id="for"> Пример цикла For</h2>
+<a href="#soder">К содержанию</a>
+<p>Теперь давайте рассмотрим пример программирования цикла. Запустите текстовый
+    редактор и наберите следующую программу:</p>
+<a id="prog"></a>
+<pre><code>
+#!/usr/bin/env python
+for cntr in range(0,10):
+    print cntr
+</code></pre>
+<p><i>Не забудьте поставить символ табуляции перед строкой «print cntr»</i>. Это важно. В
+    Python для указания на блоки кода используются не круглые «<b>(</b>» и фигурные «<b>{</b>» скобки
+    как в других языках программирования, а отступы.</p>
 <table width="100%">
     <tr>
-        <td align="left"><a href="index.html">
-            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="50" height="50" viewBox="0 0 256 256" xml:space="preserve">
+        <td align="left"><a href="#">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="50"
+                 height="50" viewBox="0 0 256 256" xml:space="preserve">
 <desc>Created with Fabric.js 1.7.22</desc>
-<defs>
+                <defs>
 </defs>
-<g transform="translate(128 128) scale(0.72 0.72)" style="">
+                <g transform="translate(128 128) scale(0.72 0.72)" style="">
 	<g style="stroke: none; stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: none; fill-rule: nonzero; opacity: 1;"
        transform="translate(-175.05 -175.05000000000004) scale(3.89 3.89)">
 	<path d="M 45 90 c 24.853 0 45 -20.147 45 -45 C 90 20.147 69.853 0 45 0 S 0 20.147 0 45 C 0 69.853 20.147 90 45 90 z M 21.459 43.791 l 18.366 -18.366 c 0.668 -0.668 1.75 -0.668 2.418 0 l 6.055 6.055 c 0.668 0.668 0.668 1.751 0 2.418 l -5.111 5.11 l 24.144 0 c 0.944 0 1.71 0.766 1.71 1.71 v 8.563 c 0 0.944 -0.766 1.71 -1.71 1.71 l -24.145 0 l 5.111 5.111 c 0.668 0.668 0.668 1.751 0 2.418 l -6.055 6.055 c -0.668 0.668 -1.751 0.668 -2.418 0 L 21.459 46.209 C 20.791 45.541 20.791 44.458 21.459 43.791 z"
@@ -119,11 +113,12 @@ categories = ['Main dish','Meat','Fish','Soup','Cookies']
 </svg>
         </a></td>
         <td align="center"><a href="index.html">
-            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="50" height="50" viewBox="0 0 256 256" xml:space="preserve">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="50"
+                 height="50" viewBox="0 0 256 256" xml:space="preserve">
 <desc>Created with Fabric.js 1.7.22</desc>
-<defs>
+                <defs>
 </defs>
-<g transform="translate(128 128) scale(0.72 0.72)" style="">
+                <g transform="translate(128 128) scale(0.72 0.72)" style="">
 	<g style="stroke: none; stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: none; fill-rule: nonzero; opacity: 1;"
        transform="translate(-175.05 -175.05000000000004) scale(3.89 3.89)">
 	<circle cx="45" cy="45" r="45"
@@ -136,12 +131,13 @@ categories = ['Main dish','Meat','Fish','Soup','Cookies']
 </g>
 </svg>
         </a></td>
-        <td align="right"><a href="index3.html">
-            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="50" height="50" viewBox="0 0 256 256" xml:space="preserve">
+        <td align="right"><a href="index2.html">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="50"
+                 height="50" viewBox="0 0 256 256" xml:space="preserve">
 <desc>Created with Fabric.js 1.7.22</desc>
-<defs>
+                <defs>
 </defs>
-<g transform="translate(128 128) scale(0.72 0.72)" style="">
+                <g transform="translate(128 128) scale(0.72 0.72)" style="">
 	<g style="stroke: none; stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: none; fill-rule: nonzero; opacity: 1;"
        transform="translate(-175.05 -175.05000000000004) scale(3.89 3.89)">
 	<path d="M 45 0 C 20.147 0 0 20.147 0 45 c 0 24.853 20.147 45 45 45 s 45 -20.147 45 -45 C 90 20.147 69.853 0 45 0 z M 68.541 46.209 L 50.175 64.575 c -0.668 0.668 -1.75 0.668 -2.418 0 l -6.055 -6.055 c -0.668 -0.668 -0.668 -1.751 0 -2.418 l 5.111 -5.11 H 22.668 c -0.944 0 -1.71 -0.766 -1.71 -1.71 v -8.563 c 0 -0.944 0.766 -1.71 1.71 -1.71 h 24.145 l -5.111 -5.111 c -0.668 -0.668 -0.668 -1.751 0 -2.418 l 6.055 -6.055 c 0.668 -0.668 1.751 -0.668 2.418 0 l 18.366 18.366 C 69.209 44.459 69.209 45.542 68.541 46.209 z"
