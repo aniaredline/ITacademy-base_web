@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Page</title>
+    <style>
+        .wrap {
+            background-color: silver;
+
+        }
+        .menu{
+            background-color: lightgray;
+            float: left;
+            width:15em;
+
+        }
+        .content_block{
+            background-color: darkgray;
+            margin-bottom: .2em;
+            overflow: hidden;
+        }
+        .image {
+            float: right;
+            background-color: darkgray;
+            width: initial;
+            /*margin-bottom: 0em;*/
+        }
+        .footer {
+            height: auto;
+            clear: both;
+            background-color: dimgrey ;
+        }
+        .clear {
+            clear: both;
+        }
+
+        .content_list {list-style-type: none}
+    </style>
+
+</head>
+<body>
+
+
+<div class="wrap">
+    <div class="menu">
+        <b>Блок навигации</b><br>
+        <ul>
+            <li>Ширина 15еm</li>
+            <li>Должен присутствовать цвет фона</li>
+            <li>Располагается слева</li>
+            <li>Блок навигации наполните контентом достаточным, чтобы по высоте он начинал захватывать вторую статью,
+                как показано в данном примере</li>
+        </ul>
+        </div>
+
+    <div class="content_block">
+        <b>Статья 1</b>
+        <ul class="content_list">
+        <li>Размер блока: </li>
+            <li>Занимает всю доступную ширину</li>
+            <li>Должен присутствовать цвет фона </li>
+        <li>Во всех "статьях" сделайте отступ снизу от соседей равным .2em,
+        при помощи свойства margin-bottom</li>
+        </ul>
+    </div>
+
+    <div class="content_block">
+        <b>Статья 2 </b>
+        <ul class="content_list">
+        <li>Размер блока: </li>
+        <li>Занимает всю доступную ширину </li>
+        <li>Должен присутствовать цвет фона </li>
+        <li>Во всех "статьях" сделайте отступ снизу от соседей равным .2em, при помощи свойства margin- bottom.
+        Kартинка вставлена при помощи тега,
+        плавание организовано по правому краю внутри данной статьи для этой картинки.</li>
+            <li><img class="image" src="icons8-post-96.png"></li></ul>
+    </div>
+    <div class="clear"></div>
+</div>
+
+
+<footer class="footer">Нижний блок, подвал. Занимает всю доступную ширину. Высота определяеться помещённым внутрь контентом. </footer>
+</body>
+</html>
