@@ -1,0 +1,26 @@
+table {
+    border: solid lightslategrey 1px;
+}
+tr:first-child th {
+    background: dimgray;
+}
+td {
+    border-bottom: dotted dimgray 2px;
+}
+td:not(:last-child){
+    border-right: dotted dimgray 2px;
+}
+
+td:first-child{
+    font-weight: bold;
+}
+tr:nth-child(odd):not(:last-child) {
+    background-color: lightslategrey;
+}
+tr:hover td {
+    background-color: gold;
+}
+tr:last-child th {
+    font-weight: normal;
+    text-transform: uppercase;
+}
