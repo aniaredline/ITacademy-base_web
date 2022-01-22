@@ -1,0 +1,77 @@
+@media screen and (max-width:1800px) {
+    .days_of_the_week div{
+        display: inline-block;
+        width: 100px;
+        height: 20px;
+        background: lightcyan;
+        border-radius: 5px;
+        border: solid 1px black;
+        color: #888;
+        margin: 0 -2px;
+        position: relative;
+        cursor: pointer;
+    }
+
+    .days_of_the_week div:hover {
+        background: lightgreen;
+
+    }
+
+    div.meals {display: none;}
+    .meals div{
+        width: 100px;
+        height: 20px;
+        background:lightblue;
+        border-radius: 5px;
+        border: solid 1px black;
+        color: gray;
+        margin: -1px 1px 0 0;
+        cursor: pointer;
+
+    }
+    .days_of_the_week div:hover .meals{
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 90%;
+        z-index: 2;
+    }
+}
+@media screen and (max-width:626px){
+   div.days_of_the_week {
+       width: 150px;
+}
+    .days_of_the_week div{
+        display: inline-block;
+        width: 100px;
+        height: 20px;
+        background: aquamarine;
+        border-radius: 5px;
+        border: solid 1px black;
+        color: #888;
+        margin: 0 -2px;
+        cursor: pointer;
+        position: relative;
+    }
+    .days_of_the_week div:hover {
+        background: lightseagreen;
+    }
+    div.meals{display: none;}
+    .meals div{
+        width: 100px;
+        height: 20px;
+        background:lightskyblue;
+        border-radius: 5px;
+        border: solid 1px black;
+        color: saddlebrown;
+        cursor: pointer;
+    }
+    .days_of_the_week div:hover .meals{
+        display: block;
+        position: absolute;
+        left: 80%;
+        top: 90%;
+        z-index: 2;
+    }
+}
+
