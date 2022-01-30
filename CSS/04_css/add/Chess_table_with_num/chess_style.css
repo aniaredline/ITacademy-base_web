@@ -1,5 +1,6 @@
 table {
     border: 8px solid  black;
+    counter-reset: numb 65;
 }
 td {
     display: inline-block;
@@ -11,11 +12,16 @@ td {
     font-weight: bold;
     color: black;
     text-align: center;
+    counter-increment: numb -1;
+}
+td:before{
+    content: counter(numb);
+    font-size: 30px;
 }
 tr:nth-child(odd) td:nth-child(odd) {
     background-color:black;
     font-size: 40px;
-    font-weight: bold;
+    font-weight: normal;
     color: white;
     text-align: center;
 
@@ -24,8 +30,7 @@ tr:nth-child(odd) td:nth-child(odd) {
 tr:nth-child(even) td:nth-child(even) {
     background-color: black;
     font-size: 40px;
-    font-weight: bold;
+    font-weight: normal;
     color: white;
-    text-align: center;
-
+    text-align: center;color: white;
 }
